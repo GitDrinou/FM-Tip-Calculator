@@ -1,0 +1,173 @@
+
+.container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 50%;
+    margin-top: 50px;
+    background: $secondary;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .1);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.leftPage {
+    color: $darkGrayishCyan;
+    width: 50%;
+    padding: 5px;
+    
+    & h3 {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    & .amount, .person {
+        padding-left: 10px;
+        margin-bottom: 20px;
+        
+
+        & input {
+            background: $colorInputText;
+            border: none;
+            text-align: right;
+            margin-left: 10px;
+            padding: 10px;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    
+
+    & input, span {
+        font-size: $fontSize_form;
+        font-family: $familyFont;
+    }
+
+    & .tips-container {
+        font-weight: 700;
+        margin-bottom: 20px;
+
+        & .tips {
+            padding-right: 15px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            & li {
+                width: 30%;
+                padding: 5px 10px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                text-align: center;               
+                font-size: $fontSize_form;
+                font-family: $familyFont;
+                background: $veryDarkCyan;
+                color: $secondary;
+                cursor: pointer;
+                
+                &:hover {
+                    background: $primary;
+                    color: $veryDarkCyan;
+                }
+            }
+
+            & li a {
+                text-decoration: none;
+                outline: none;
+            }
+
+            & li:last-child {
+                padding-left: 0;
+                background: transparent;
+            }
+
+            & li input {
+                font-size: $fontSize_form;
+                font-family: $familyFont;
+                background: $colorInputText;
+                border: none;
+                outline: none;
+                padding: 0 5px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }        
+        
+    }
+}
+
+.error {
+    text-align: right;
+    font-size: 0.7rem;
+    color: $errorColor;
+    font-weight: 700;
+    padding-right: 40px;
+}
+
+.rightPage {
+    width: 50%;
+    padding: 10px;
+
+    & .total-content {
+        background: $veryDarkCyan;
+        border-radius: 10px;
+        padding: 70px 0 30px 0;
+        height: 440px;
+        position: relative;
+    }
+
+    & .tipAmount, .total {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;        
+        color: $secondary;
+        align-items: center;
+    }
+    
+    & .tipAmount--label, .total--label {
+        width: 40%;
+        & > span {
+            color: $secondary;
+            font-size: 0.7rem;
+            opacity: 0.5;
+        }
+    }
+
+    & .tipAmount--value, .total--value {
+        font-size: 2.5rem;
+        color: $primary;
+        font-weight: 700;
+    }
+
+    & .total {
+        margin-top: 30px;
+    }
+    
+    & .reset {
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.2;
+        background: $primary;
+        opacity: 0.2;
+        padding: 10px;
+        width: 280px;
+        font-size: 1.3rem;
+        color: $darkGrayishCyan;
+        cursor: pointer;
+    }
+}

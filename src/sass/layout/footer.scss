@@ -1,0 +1,17 @@
+
+footer {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $darkGrayishCyanLighther;
+    font-weight: 700;
+
+    & > div a {
+        outline: none;
+        text-decoration: none;
+        color:$darkGrayishCyan;
+    }
+}

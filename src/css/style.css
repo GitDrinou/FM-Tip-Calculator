@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #c5e4e7;
+  font-family: "Space Mono", monospace, sans-serif;
+}
+
+.title {
+  width: 155px;
+  letter-spacing: 1.1rem;
+  overflow-wrap: break-word;
+  color: #375c5d;
+}
+
+footer {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #7f9c9f;
+  font-weight: 700;
+}
+footer > div a {
+  outline: none;
+  text-decoration: none;
+  color: #5e7a7d;
+}
+
+.container {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 50%;
+  margin-top: 50px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.leftPage {
+  color: #5e7a7d;
+  width: 50%;
+  padding: 5px;
+}
+.leftPage h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.leftPage .amount, .leftPage .person {
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.leftPage .amount input, .leftPage .person input {
+  background: #f4f8fb;
+  border: none;
+  text-align: right;
+  margin-left: 10px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.leftPage input, .leftPage span {
+  font-size: 1.5rem;
+  font-family: "Space Mono", monospace, sans-serif;
+}
+.leftPage .tips-container {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.leftPage .tips-container .tips {
+  padding-right: 15px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.leftPage .tips-container .tips li {
+  width: 30%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Space Mono", monospace, sans-serif;
+  background: #00494d;
+  color: white;
+  cursor: pointer;
+}
+.leftPage .tips-container .tips li:hover {
+  background: #26c0ab;
+  color: #00494d;
+}
+.leftPage .tips-container .tips li a {
+  text-decoration: none;
+  outline: none;
+}
+.leftPage .tips-container .tips li:last-child {
+  padding-left: 0;
+  background: transparent;
+}
+.leftPage .tips-container .tips li input {
+  font-size: 1.5rem;
+  font-family: "Space Mono", monospace, sans-serif;
+  background: #f4f8fb;
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  text-align: right;
+  font-size: 0.7rem;
+  color: darkred;
+  font-weight: 700;
+  padding-right: 40px;
+}
+
+.rightPage {
+  width: 50%;
+  padding: 10px;
+}
+.rightPage .total-content {
+  background: #00494d;
+  border-radius: 10px;
+  padding: 70px 0 30px 0;
+  height: 440px;
+  position: relative;
+}
+.rightPage .tipAmount, .rightPage .total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  color: white;
+  align-items: center;
+}
+.rightPage .tipAmount--label, .rightPage .total--label {
+  width: 40%;
+}
+.rightPage .tipAmount--label > span, .rightPage .total--label > span {
+  color: white;
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+.rightPage .tipAmount--value, .rightPage .total--value {
+  font-size: 2.5rem;
+  color: #26c0ab;
+  font-weight: 700;
+}
+.rightPage .total {
+  margin-top: 30px;
+}
+.rightPage .reset {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.2;
+  background: #26c0ab;
+  opacity: 0.2;
+  padding: 10px;
+  width: 280px;
+  font-size: 1.3rem;
+  color: #5e7a7d;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
