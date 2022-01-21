@@ -51,7 +51,7 @@ footer > div a {
 }
 
 .content {
-  width: 50%;
+  width: 800px;
   margin-top: 50px;
   background: white;
   border-radius: 20px;
@@ -60,7 +60,7 @@ footer > div a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .leftPage {
@@ -88,6 +88,9 @@ footer > div a {
 .leftPage input, .leftPage span {
   font-size: 1.5rem;
   font-family: "Space Mono", monospace, sans-serif;
+}
+.leftPage .fa-user {
+  font-size: 1rem;
 }
 .leftPage .tips-container {
   font-weight: 700;
@@ -134,6 +137,7 @@ footer > div a {
   padding: 0 5px;
   font-weight: 700;
   cursor: pointer;
+  width: 105px;
 }
 
 .error {
@@ -147,6 +151,7 @@ footer > div a {
 .rightPage {
   width: 50%;
   padding: 10px;
+  position: relative;
 }
 .rightPage .total-content {
   background: #00494d;
@@ -180,15 +185,14 @@ footer > div a {
 }
 .rightPage .reset {
   position: absolute;
-  left: 30px;
-  right: 30px;
+  margin: 0 20px;
   bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 0.2;
   background: #26c0ab;
   opacity: 0.2;
   padding: 10px;
-  width: 280px;
+  width: 90%;
   font-size: 1.3rem;
   color: #5e7a7d;
   cursor: pointer;
@@ -197,6 +201,29 @@ footer > div a {
 @media screen and (max-width: 1400px) {
   .content {
     width: 90%;
+  }
+
+  .amount span, .person span {
+    width: 20%;
+    padding: 0 10px;
+  }
+  .amount .fa-user, .person .fa-user {
+    width: 10%;
+  }
+  .amount input, .person input {
+    width: 80%;
+  }
+
+  .tipAmount--label, .total--label {
+    width: 50%;
+    font-size: 1.3rem;
+  }
+  .tipAmount--label > span, .total--label > span {
+    font-size: 1rem;
+  }
+
+  .reset {
+    width: 95%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -216,38 +243,50 @@ footer > div a {
   }
   .leftPage .amount, .leftPage .person {
     width: 100%;
-    padding-left: 0px;
+    margin: 0;
+    padding-left: 0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
-  .leftPage .amount span, .leftPage .amount i, .leftPage .person span, .leftPage .person i {
+  .leftPage .amount span, .leftPage .person span {
     width: 20%;
-    margin-right: 10px;
+    padding: 0 10px;
+  }
+  .leftPage .amount .fa-user, .leftPage .person .fa-user {
+    width: 20%;
+    padding: 0;
   }
   .leftPage .amount input, .leftPage .person input {
-    width: 70%;
-    margin-left: 0px;
+    width: 80%;
+    padding: 0 10px;
   }
-  .leftPage .tips li input {
+  .leftPage h3 {
+    margin-top: 20px;
+  }
+  .leftPage .tips-container .tips li {
+    padding: 12px;
+  }
+  .leftPage .tips-container .tips li input {
     width: 150px;
   }
 
   .rightPage {
     width: 100%;
+    margin-top: 50px;
   }
   .rightPage .reset {
-    width: 90%;
+    width: 95%;
+  }
+}
+@media screen and (max-width: 470px) {
+  .container {
+    margin: 30px 0;
   }
 
   .rightPage .reset {
     width: 90%;
-  }
-}
-@media screen and (max-width: 415px) {
-  .rightPage .reset {
-    width: 280px;
   }
 }
 
