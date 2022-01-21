@@ -171,3 +171,76 @@
         cursor: pointer;
     }
 }
+
+@media screen and (max-width: 1400px) {
+
+    .content {
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container {
+        align-items: center;
+        justify-content: center;
+        margin: 30px 10px;
+    }
+    .content {
+        width: 95%;
+        flex-direction: column;
+    }
+    
+    .leftPage {
+        width: 100%;
+
+        .amount, .person {
+            width: 100%;
+            padding-left: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            
+            & span, i {
+                width:20%;
+                margin-right:10px;
+            }
+
+            & input {
+                width: 70%;
+                margin-left: 0px;
+            }
+        }
+
+        & .tips li input {
+            width: 150px;
+        }
+
+    }
+
+    .rightPage {
+        width: 100%;
+
+        & .reset {            
+            width: 90%;
+        }
+    }    
+    .rightPage {
+
+        & .reset {            
+            width: 90%;
+        }
+    }  
+}
+
+@media screen and (max-width: 415px) {
+
+    .rightPage {
+
+        & .reset {            
+            width: 280px;
+        }
+    }  
+}

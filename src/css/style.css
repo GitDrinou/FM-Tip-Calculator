@@ -194,4 +194,61 @@ footer > div a {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1400px) {
+  .content {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    align-items: center;
+    justify-content: center;
+    margin: 30px 10px;
+  }
+
+  .content {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .leftPage {
+    width: 100%;
+  }
+  .leftPage .amount, .leftPage .person {
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .leftPage .amount span, .leftPage .amount i, .leftPage .person span, .leftPage .person i {
+    width: 20%;
+    margin-right: 10px;
+  }
+  .leftPage .amount input, .leftPage .person input {
+    width: 70%;
+    margin-left: 0px;
+  }
+  .leftPage .tips li input {
+    width: 150px;
+  }
+
+  .rightPage {
+    width: 100%;
+  }
+  .rightPage .reset {
+    width: 90%;
+  }
+
+  .rightPage .reset {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 415px) {
+  .rightPage .reset {
+    width: 280px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
