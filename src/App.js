@@ -14,22 +14,27 @@ function App() {
   // local states
   const [bill, setBill] = useState(0)
   const [tip, setTip] = useState(0)
+  const [customTip, setCustomTip] = useState(0)
   const [numberPerson, setNumberPerson] = useState(0)
 
 
   // Event handlers
   const handleChangeGetBill = (e) => { setBill(e.target.value) }
   const handleClickGetTip = (e) => { setTip(e.target.value) }
-  const handleChangeCustomTip = (e) => { setTip(e.target.value) }
+  const handleChangeCustomTip = (e) => { setCustomTip(e.target.value) }
   const handleChangeGetPerson = (e) => { setNumberPerson(e.target.value) }
   const handleClickReset = () => {
     setBill(0)
     setTip(0)
+    setCustomTip(0)
     setNumberPerson(0)
   }
 
+  let valueTip = tip > 0 ? tip : customTip > 0 ? customTip : 0
+
   // Calculate
-  let tipAmount = bill > 0 && tip > 0 ? (bill * tip / 100) : 0
+  
+  let tipAmount = bill > 0 && valueTip > 0 ? (bill * valueTip / 100) : 0
   let tipPerPerson = parseInt(numberPerson) > 0 ? tipAmount / parseInt(numberPerson) : 0
   let totalPerPerson = parseInt(numberPerson) > 0 ? (bill / parseInt(numberPerson)) + tipPerPerson : 0
 
@@ -59,6 +64,7 @@ function App() {
             handleChangeGetPerson = {handleChangeGetPerson} 
             error = {error}
             tip = {tip}
+            customTip = {customTip}
           />    
           <DisplayPerPerson 
             tipPerPerson = {tipPerPerson.toFixed(2)}

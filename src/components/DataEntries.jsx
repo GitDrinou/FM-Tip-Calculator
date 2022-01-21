@@ -11,6 +11,7 @@ const DataEntries = (props) => {
     let valBill = props.bill > 0 ? props.bill : ""
     let valPerson = props.numberPerson > 0 ? props.numberPerson : ""
     let valTip = props.tip > 0 ? props.tip : ""
+    let valCustomTip = props.customTip > 0 ? props.customTip : ""
 
     return (
 
@@ -31,7 +32,7 @@ const DataEntries = (props) => {
                     )
                   
                 ))}
-                <li><input type="text" id="tipsCustom" placeholder="Custom" onChange={props.handleChangeCustomTip} value={valTip} /></li>
+                <li><input type="text" id="tipsCustom" placeholder="Custom" onChange={props.handleChangeCustomTip} value={valCustomTip} /></li>
               </ul>
             </div>
             <h3>Number of People</h3>
