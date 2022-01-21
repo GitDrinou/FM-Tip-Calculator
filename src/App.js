@@ -1,6 +1,7 @@
 import { useState } from "react"
 import DataEntries from "./components/DataEntries"
 import DisplayPerPerson from "./components/DisplayPerPerson"
+import Footer from "./components/Footer"
 import "./sass/main.scss"
 
 
@@ -14,24 +15,26 @@ function App() {
   const [bill, setBill] = useState(0)
   const [tip, setTip] = useState(0)
   const [numberPerson, setNumberPerson] = useState(0)
-  // const [totalTipPerPerson, setTotalTipPerPerson] = useState(0)
-  // const [totalPerPerson, setTotalPerPerson] = useState(0)
 
 
   // Event handlers
   const handleChangeGetBill = (e) => { setBill(e.target.value) }
   const handleClickGetTip = (e) => { setTip(e.target.value) }
+  const handleChangeCustomTip = (e) => { setTip(e.target.value) }
   const handleChangeGetPerson = (e) => { setNumberPerson(e.target.value) }
+  const handleClickReset = () => {
+    setBill(0)
+    setTip(0)
+    setNumberPerson(0)
+  }
 
+  // Calculate
+  let tipAmount = bill > 0 && tip > 0 ? (bill * tip / 100) : 0
+  let tipPerPerson = parseInt(numberPerson) > 0 ? tipAmount / parseInt(numberPerson) : 0
+  let totalPerPerson = parseInt(numberPerson) > 0 ? (bill / parseInt(numberPerson)) + tipPerPerson : 0
 
-  // Calculator
-
-  let tipAmount = (bill * tip / 100)
-  let tipPerPerson = tipAmount / parseInt(numberPerson)
-  let totalPerPerson = (bill / parseInt(numberPerson)) + tipPerPerson
-
- 
-  console.log(tipAmount, tipPerPerson.toFixed(2), totalPerPerson)
+  // active Reset button
+  let bReset = totalPerPerson > 0 ? true : false
 
   // Error condition
   if (bill > 0 && numberPerson === 0) { 
@@ -47,9 +50,12 @@ function App() {
       <h1 className="title">SPLITTER</h1>
       <div className="content">
           <DataEntries 
+            bill = {bill}
+            numberPerson = {numberPerson}
             tips = {tips} 
             handleChangeGetBill = {handleChangeGetBill}
             handleClickGetTip = {handleClickGetTip}
+            handleChangeCustomTip = {handleChangeCustomTip}
             handleChangeGetPerson = {handleChangeGetPerson} 
             error = {error}
             tip = {tip}
@@ -57,14 +63,12 @@ function App() {
           <DisplayPerPerson 
             tipPerPerson = {tipPerPerson.toFixed(2)}
             totalPerPerson = {totalPerPerson.toFixed(2)}
+            handleClickReset = {handleClickReset}
+            bReset = {bReset}
           />                  
       </div>
     </div>  
-    
-    <footer>
-      <div>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a></div>
-      <div>Coded by <a href="https://gitdrinou.github.io/" target="_blank" rel="noreferrer">Sandrine@GitDrinou</a></div>
-    </footer>
+    <Footer />    
   </div>
   );
 }
